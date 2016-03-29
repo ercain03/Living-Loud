@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Living Loud - Sign up</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<style type="text/css">
+    #red-text {
+      color: red;
+    }
+</style>
+</head>
+<body style="background-color: black; color: white;">
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+    
+          <form id="signedUp" class="form-horizontal" action="" method="POST">
+          <fieldset>
+            <div id="legend">
+              <legend class="" style="color: white;">Sign up it's free!</legend>
+            </div>
+            <div class="control-group">
+              <label class="control-label" for="username">Username:</label>
+              <div class="controls">
+                <input type="text" id="username" name="username" placeholder="johndoe33" class="work form-control input-lg" required="">
+              </div>
+            </div>
+         
+            <div class="control-group">
+              <label class="control-label" for="email">E-mail:</label>
+              <div class="controls">
+                <input type="email" id="email" name="email" placeholder="email@xxx.com" class="work form-control input-lg" required="">
+              </div>
+            </div>
+         
+            <div class="control-group">
+              <label class="control-label" for="password">Password:</label>
+              <div class="controls">
+                <input type="password" id="password" name="password" placeholder="X@#$%" class="work form-control input-lg" required="">
+              </div>
+            </div>
+         
+            <div class="control-group">
+              <label class="control-label" for="password_confirm">Re-type Password:</label>
+              <div class="controls">
+                <input type="password" id="password_confirm" name="password_confirm" placeholder="X@#$%" class="work form-control input-lg" required="">
+              </div>
+            </div>
+            <br>
+            <div class="control-group">
+              <div class="controls">
+                <p id="red-text" style="font-size: 14px">Reminder: All fields must be completed to activate sign up button.</p>
+                <button id="signIn" class="btn btn-primary btn-lg outline" onclick="test1()">Sign up</button>
+        <form>
+            <input class="btn btn-primary btn-lg outline" type="button" value="Home" onclick="window.location.href='index.html'" />
+        </form>
+              </div>
+            </div>
+            <div id="userInfo">
+            <h3>Your username is:</h3>
+              <p id="userName" style="font-size: 30px;"></p>
+            </div>
+          </fieldset>
+        </form>
+    
+    </div> 
+  </div>
+</div>
+<script type="text/javascript">
+
+//Sign up confirmation function.
+document.getElementById("signIn").addEventListener("click", function(){ 
+    alert("Thank you for signing up, a confirmation email will be sent to the above address shortly :).");
+    });
+
+//Post username to p tag.
+function test1(){
+    var userInput = document.getElementById("username").value;
+    document.getElementById("userName").innerHTML = userInput;
+    }
+
+//Checks to see if the fields are filled to activate the sign in button. 
+$('#signIn').prop('disabled', true);
+$('.work').change(function() {
+   disSubmitButton();
+});
+
+function disSubmitButton(){
+     var count = 0;
+     $('.work').each(function(i){
+       if( $(this).val() === '') {
+           count++;
+        }
+        if(count == 0){
+          $('#signIn').prop('disabled', false);
+        }else {
+          $('#signIn').prop('disabled', true);
+        }
+    });
+}
+disSubmitButton();
+
+//checks if any data is in the form field adds value to the form element.
+$(document).ready(function () {
+    function init() {
+        if (localStorage["username"]) {
+            $('#username').val(localStorage["username"]);
+        }
+        if (localStorage["email"]) {
+            $('#email').val(localStorage["email"]);
+        }
+        if (localStorage["password"]) {
+            $('#password').val(localStorage["password"]);
+        }
+    }
+  init();
+});
+
+//adds inputed data in the local storage
+$('.work').change(function () {
+  localStorage[$(this).attr('name')] = $(this).val();
+});
+
+//clears local storage.
+$('#signedUp').submit(function() {
+  localStorage.clear();
+});
+</script>
+
+</body>
+</html>

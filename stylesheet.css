@@ -1,0 +1,292 @@
+/* stylesheet.css */
+
+html,
+body {
+	height: 100%;
+}
+
+body {
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+	color: #6c6f73;
+}
+
+h1,h2,h3,h4,h5 {
+	color: #333;
+}
+
+h6 {
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 0.8rem;
+	letter-spacing: 0.1rem;
+}
+
+img {
+	max-width: 100%;
+}
+
+.blockquote {
+	font-size: 1.6rem;
+	color: #333;
+	border: none;
+	padding: 0;
+}
+
+.blockquote-footer {
+	margin: 1rem 0 0;
+}
+
+#stage {
+	background: url('images/big.jpg') center center no-repeat;
+	background-size: cover;
+	color: white;
+	height:100%;
+	width: 100%;
+	display: flex;
+	align-items: center;
+}
+
+#stage-caption {
+	font-size: 1.4rem;
+	font-weight: 200;
+	max-width: 60rem;
+	margin: 0 auto;
+	text-align: center;
+}
+
+#stage-caption h1 {
+	color: white;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.feature-content {
+	padding: 8rem 0;
+	overflow: hidden;
+}
+
+.feature-dark {
+	background: rgba(0, 0, 0, 1.0);
+	color: white;
+}
+
+.mic {
+	width: 600px;
+	height: 400px;
+}
+
+.band {
+	width: 600px;
+	height: 400px;
+}
+
+.feature-alt {
+	background: #f0f0f0;
+
+}
+
+#feature-four .feature-content {
+	padding: 0;
+}
+
+#feature-five img {
+	margin-top: 2rem;
+}
+
+#main-footer {
+	background: #262F36;
+	color: white;
+	padding: 6rem 0;
+	font-size: 0.8rem;
+}
+
+#main-footer h6 {
+	color: #718FA9;
+}
+
+#main-footer a {
+	color: rgba(255, 255, 255, 1.0);
+}
+
+/**************************
+  DEFAULT BOOTSTRAP STYLES
+**************************/
+
+.btn {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  padding: 10px 16px;
+}
+  
+.btn-lg {
+  font-size: 18px;
+  line-height: 1.33;
+  border-radius: 6px;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #428bca;
+  border-color: #357ebd;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.open .dropdown-toggle.btn-primary {
+  color: #fff;
+  background-color: #3276b1;
+  border-color: #285e8e;
+}
+
+/***********************
+  OUTLINE BUTTONS
+************************/
+
+.btn.outline {
+    background: none;
+    padding: 12px 22px;
+}
+.btn-primary.outline {
+    border: 2px solid #0099cc;
+    color: #0099cc;
+}
+.btn-primary.outline:hover, .btn-primary.outline:focus, .btn-primary.outline:active, .btn-primary.outline.active, .open > .dropdown-toggle.btn-primary {
+    color: #33a6cc;
+    border-color: #33a6cc;
+}
+.btn-primary.outline:active, .btn-primary.outline.active {
+    border-color: #007299;
+    color: #007299;
+    box-shadow: none;
+}
+
+/***********************
+  CUSTON BTN VALUES
+************************/
+
+.btn {
+    padding: 14px 24px;
+    border: 0 none;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.btn:focus, .btn:active:focus, .btn.active:focus {
+    outline: 0 none;
+}
+
+/**************************
+  DEFAULT BOOTSTRAP STYLES
+**************************/
+
+.btn {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  padding: 10px 16px;
+}
+  
+.btn-lg {
+  font-size: 18px;
+  line-height: 1.33;
+  border-radius: 6px;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #428bca;
+  border-color: #357ebd;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.open .dropdown-toggle.btn-primary {
+  color: #fff;
+  background-color: #3276b1;
+  border-color: #285e8e;
+}
+
+/***********************
+  RAISED BUTTONS
+************************/
+.btn-primary.raised {
+    box-shadow: 0 3px 0 0 #007299;
+}
+.btn-primary.raised:active, .btn-primary.raised.active {
+    background: #33a6cc;
+    box-shadow: none;
+    margin-bottom: -3px;
+    margin-top: 3px;
+}
+
+/***********************
+  CUSTON BTN VALUES
+************************/
+
+.btn {
+    padding: 14px 24px;
+    border: 0 none;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.btn:focus, .btn:active:focus, .btn.active:focus {
+    outline: 0 none;
+}
+
+.btn-primary {
+    background: #0099cc;
+    color: #ffffff;
+}
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
+    background: #33a6cc;
+}
+.btn-primary:active, .btn-primary.active {
+    background: #007299;
+    box-shadow: none;
+}
+/* button designed by https://bootstrapbay.com/blog/bootstrap-button-styles/ */
+
+/* Media Queries */
+
+@media screen and ( min-width : 991px ) {
+    
+    .feature-content {
+		display: flex;
+		align-items: center;
+	}
+}
